@@ -1,0 +1,12 @@
+{
+  "categories": [{ "id": "carnes", "name": "Carnes" }],
+  "products": [
+    {
+      "id": "picanha-grelhada",
+      "categoryId": "carnes",
+      "name": "Picanha Grelhada",
+      "description": "Picanha na brasa, ponto do chef, acompanha farofa e vinagrete.",
+      "price": 89.9
+    }
+  ]
+}

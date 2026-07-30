@@ -1,0 +1,31 @@
+@theme {
+  /* Cores extraídas da logomarca Deck Boi na Brasa */
+  --color-background: #140f0c;
+  --color-surface: #1f1712;
+  --color-surface-light: #2a2018;
+
+  --color-wood-300: #b98a54;
+  --color-wood-600: #8b5a2b;
+  --color-wood-800: #4a2f1a;
+
+  --color-brasa-400: #d33a3a;
+  --color-brasa-500: #b5222a;
+  --color-brasa-600: #8e1b21;
+
+  --color-flame-300: #ffcf3f;
+  --color-flame-500: #ff6a1a;
+
+  --color-cream: #f3e8d0;
+  --color-cream-dim: #cbbfa4;
+
+  --color-leaf: #4a7c3a;
+
+  /* Tipografia */
+  --font-display: 'Anton', 'Oswald', sans-serif;
+  --font-script: 'Kaushan Script', cursive;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Espaçamento de seção padrão */
+  --spacing-section: 4rem;
+  --spacing-section-lg: 6rem;
+}
