@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import RootLayout from '@/components/layout/RootLayout'
 import Home from '@/pages/Home'
 import Cardapio from '@/pages/Cardapio'
+import ProdutoDetalhe from '@/pages/ProdutoDetalhe'
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'cardapio', element: <Cardapio /> },
+      { path: 'cardapio/:productId', element: <ProdutoDetalhe /> },
     ],
   },
 ])

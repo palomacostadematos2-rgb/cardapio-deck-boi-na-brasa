@@ -1,23 +1,6 @@
-import {
-  Beer,
-  Martini,
-  Wine,
-  CupSoda,
-  Sandwich,
-  UtensilsCrossed,
-} from 'lucide-react'
-import type { LucideIcon } from 'lucide-react'
+import { categoryIconMap } from '@/constants/categoryIcons'
 import type { ProductCategory } from '@/types/product'
 import { cn } from '@/utils/cn'
-
-const iconMap: Record<string, LucideIcon> = {
-  Beer,
-  Martini,
-  Wine,
-  CupSoda,
-  Sandwich,
-  UtensilsCrossed,
-}
 
 interface CategoryTabsProps {
   categories: ProductCategory[]
@@ -33,7 +16,7 @@ function CategoryTabs({ categories, activeId, onChange }: CategoryTabsProps) {
       className="scrollbar-none -mx-4 flex gap-2 overflow-x-auto px-4 py-3 sm:mx-0 sm:justify-center sm:px-0"
     >
       {categories.map((category) => {
-        const Icon = iconMap[category.icon]
+        const Icon = categoryIconMap[category.icon]
         const isActive = category.id === activeId
 
         return (
