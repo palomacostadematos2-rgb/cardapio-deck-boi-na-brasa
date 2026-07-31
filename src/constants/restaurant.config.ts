@@ -9,12 +9,22 @@ export const restaurantConfig: RestaurantConfig = {
     'Churrasco no ponto, ambiente descontraído e muito sabor na brasa.',
   logo,
   address: {
-    street: 'Endereço a definir',
-    city: 'Cidade',
-    state: 'UF',
+    street: 'Rua Desembargador José Satyro, 302',
+    city: 'Castelo',
+    state: 'MG',
   },
-  phone: '',
-  whatsapp: '',
-  openingHours: [{ days: 'Ter. a Dom.', hours: '18h às 23h' }],
-  social: [],
+  phone: '(31) 2552-4669',
+  whatsapp: '(31) 97107-2705',
+  openingHours: [
+    { days: 'Terça a Sexta', hours: '17h às 23h45' },
+    { days: 'Sábado e Feriados', hours: '11h às 23h45' },
+    { days: 'Domingo', hours: '11h às 22h' },
+  ],
+  social: [
+    {
+      label: '@deckboinabrasa',
+      url: 'https://instagram.com/deckboinabrasa',
+      icon: 'instagram',
+    },
+  ],
 }

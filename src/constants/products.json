@@ -1,12 +1,2037 @@
 {
-  "categories": [{ "id": "carnes", "name": "Carnes" }],
+  "categories": [
+    { "id": "cervejas", "name": "Cervejas", "icon": "Beer" },
+    {
+      "id": "caipirinhas-drinks",
+      "name": "Caipirinhas & Drinks",
+      "icon": "Martini"
+    },
+    {
+      "id": "destilados-licores",
+      "name": "Destilados & Licores",
+      "icon": "Wine"
+    },
+    {
+      "id": "sucos-nao-alcoolicos",
+      "name": "Sucos & Não Alcoólicos",
+      "icon": "CupSoda"
+    },
+    { "id": "petiscos", "name": "Petiscos", "icon": "Sandwich" },
+    { "id": "porcoes", "name": "Porções", "icon": "UtensilsCrossed" }
+  ],
   "products": [
     {
-      "id": "picanha-grelhada",
-      "categoryId": "carnes",
-      "name": "Picanha Grelhada",
-      "description": "Picanha na brasa, ponto do chef, acompanha farofa e vinagrete.",
-      "price": 89.9
+      "id": "cervejas-01",
+      "categoryId": "cervejas",
+      "group": "Albanos 600ml",
+      "name": "American Ipa",
+      "price": 26.8
+    },
+    {
+      "id": "cervejas-02",
+      "categoryId": "cervejas",
+      "group": "Albanos 600ml",
+      "name": "American Session Ipa",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-03",
+      "categoryId": "cervejas",
+      "group": "Albanos 600ml",
+      "name": "Life Lager",
+      "price": 19.8
+    },
+    {
+      "id": "cervejas-04",
+      "categoryId": "cervejas",
+      "group": "Albanos 600ml",
+      "name": "Pilsen",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-05",
+      "categoryId": "cervejas",
+      "group": "Slod 500ml",
+      "name": "American Pale Ale Apa",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-06",
+      "categoryId": "cervejas",
+      "group": "Slod 500ml",
+      "name": "American Wheat",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-07",
+      "categoryId": "cervejas",
+      "group": "Slod 500ml",
+      "name": "Índia Pale Ale",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-08",
+      "categoryId": "cervejas",
+      "group": "Slod 500ml",
+      "name": "Pale Ale - Esb",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-09",
+      "categoryId": "cervejas",
+      "group": "Baden Baden 600ml",
+      "name": "Cristal Pilsen",
+      "price": 24.9
+    },
+    {
+      "id": "cervejas-10",
+      "categoryId": "cervejas",
+      "group": "Baden Baden 600ml",
+      "name": "Golden Ale",
+      "price": 24.9
+    },
+    {
+      "id": "cervejas-11",
+      "categoryId": "cervejas",
+      "group": "Baden Baden 600ml",
+      "name": "Ipa",
+      "price": 24.9
+    },
+    {
+      "id": "cervejas-12",
+      "categoryId": "cervejas",
+      "group": "Baden Baden 600ml",
+      "name": "Peach",
+      "price": 24.9
+    },
+    {
+      "id": "cervejas-13",
+      "categoryId": "cervejas",
+      "group": "Baden Baden 600ml",
+      "name": "Wit Bier",
+      "price": 24.9
+    },
+    {
+      "id": "cervejas-14",
+      "categoryId": "cervejas",
+      "group": "Heineken 600ml",
+      "name": "Praya",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-15",
+      "categoryId": "cervejas",
+      "group": "Heineken 335ml",
+      "name": "Lagunitas Ipa",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-16",
+      "categoryId": "cervejas",
+      "group": "Heineken 335ml",
+      "name": "Lagunitas Session Ipa",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-17",
+      "categoryId": "cervejas",
+      "group": "Wals 600ml",
+      "name": "Lagoinha",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-18",
+      "categoryId": "cervejas",
+      "group": "Wals 600ml",
+      "name": "Pilsen",
+      "price": 19.8
+    },
+    {
+      "id": "cervejas-19",
+      "categoryId": "cervejas",
+      "group": "Verace 600ml",
+      "name": "Maracutaya Fruit Beer",
+      "price": 32.8
+    },
+    {
+      "id": "cervejas-20",
+      "categoryId": "cervejas",
+      "group": "Verace 600ml",
+      "name": "Pilsen",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-21",
+      "categoryId": "cervejas",
+      "group": "Verace 600ml",
+      "name": "Rapsódia Double Ipa",
+      "price": 36.8
+    },
+    {
+      "id": "cervejas-22",
+      "categoryId": "cervejas",
+      "group": "Verace 600ml",
+      "name": "Session Ipa",
+      "price": 24.8
+    },
+    {
+      "id": "cervejas-23",
+      "categoryId": "cervejas",
+      "group": "Verace 600ml",
+      "name": "Syrena American Ipa",
+      "price": 29.8
+    },
+    {
+      "id": "cervejas-24",
+      "categoryId": "cervejas",
+      "group": "Laut 600ml",
+      "name": "De Leve Light Lager",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-25",
+      "categoryId": "cervejas",
+      "group": "Laut 600ml",
+      "name": "Pilsen",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-26",
+      "categoryId": "cervejas",
+      "group": "Therezópolis 500ml",
+      "name": "Dunkel",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-27",
+      "categoryId": "cervejas",
+      "group": "Therezópolis 500ml",
+      "name": "Gold Lager",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-28",
+      "categoryId": "cervejas",
+      "group": "Therezópolis 500ml",
+      "name": "Jade Ipa",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-29",
+      "categoryId": "cervejas",
+      "group": "Therezópolis 500ml",
+      "name": "Rubine Bock",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-30",
+      "categoryId": "cervejas",
+      "group": "Therezópolis 500ml",
+      "name": "Weissbier",
+      "price": 17.8
+    },
+    {
+      "id": "cervejas-31",
+      "categoryId": "cervejas",
+      "group": "Long Neck",
+      "name": "Caracu e Malzibier",
+      "price": 12.0
+    },
+    {
+      "id": "cervejas-32",
+      "categoryId": "cervejas",
+      "group": "Long Neck",
+      "name": "Corona, Corona Zero",
+      "price": 12.5
+    },
+    {
+      "id": "cervejas-33",
+      "categoryId": "cervejas",
+      "group": "Long Neck",
+      "name": "Heineken, Heineken Zero",
+      "price": 12.5
+    },
+    {
+      "id": "cervejas-34",
+      "categoryId": "cervejas",
+      "group": "Long Neck",
+      "name": "Skol Beats",
+      "description": "Senses, Red Mix Frutas Vermelhas, GT",
+      "price": 13.8
+    },
+    {
+      "id": "cervejas-35",
+      "categoryId": "cervejas",
+      "group": "Long Neck",
+      "name": "Stella Artois, Stella Pure Gold",
+      "price": 12.5
+    },
+    {
+      "id": "cervejas-36",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Amstel",
+      "price": 14.8
+    },
+    {
+      "id": "cervejas-37",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Brahma",
+      "price": 13.9
+    },
+    {
+      "id": "cervejas-38",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Corona",
+      "price": 19.5
+    },
+    {
+      "id": "cervejas-39",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Heineken",
+      "price": 19.5
+    },
+    {
+      "id": "cervejas-40",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Original",
+      "price": 17.5
+    },
+    {
+      "id": "cervejas-41",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Serra Malte",
+      "price": 17.5
+    },
+    {
+      "id": "cervejas-42",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Stella Good",
+      "price": 19.5
+    },
+    {
+      "id": "cervejas-43",
+      "categoryId": "cervejas",
+      "group": "Tradicionais 600ml",
+      "name": "Stella",
+      "price": 18.5
+    },
+
+    {
+      "id": "drinks-01",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip 03 Limões",
+      "description": "Limão Siciliano, Limão Taiti, Limão Capeta, Vodka",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-02",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Deck",
+      "description": "Limão Siciliano, Açúcar, Gelo, Smirnoff, Groselha",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-03",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Kiwi",
+      "description": "Kiwi, Açúcar, Gelo, Smirnoff",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-04",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Maracujá com Manjericão",
+      "description": "Maracujá, Limão Siciliano, Manjericão e Hortelã",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-05",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Maracujá",
+      "description": "Vodka Smirnoff, Maracujá, Gelo, Açúcar",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-06",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Morango com Manjericão",
+      "description": "Vodka Smirnoff, Gelo, Açúcar e Mexerica",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-07",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Morango",
+      "description": "Morango, Açúcar, Gelo",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-08",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Sake 03 Limões",
+      "description": "Limão Siciliano, Limão Taiti, Limão Capeta, Sake",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-09",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Sake Morango",
+      "description": "Limão Siciliano, Limão Taiti, Limão Capeta, Sake",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-10",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Sake",
+      "description": "Kiwi, Açúcar, Gelo, Sake",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-11",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Vodka",
+      "description": "Limão Siciliano e Limão Cravo, Smirnoff, Açúcar e Gelo",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-12",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caip Vodka Tradicional",
+      "description": "Limão, Açúcar e Gelo",
+      "price": 26.8
+    },
+    {
+      "id": "drinks-13",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caipirinha 03 Limões",
+      "description": "Limão Siciliano, Limão Capeta, Limão Taiti, Cachaça, Açúcar",
+      "price": 26.8
+    },
+    {
+      "id": "drinks-14",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caipirinha Deck",
+      "description": "Cachaça Branca, Gelo, Groselha e Limão Siciliano",
+      "price": 24.8
+    },
+    {
+      "id": "drinks-15",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Tradicionais",
+      "name": "Caipirinha Tradicional",
+      "description": "Cachaça Branca, Gelo e Limão",
+      "price": 20.8
+    },
+    {
+      "id": "drinks-16",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Especiais — escolha a fruta: morango, maracujá, kiwi, mexerica, abacaxi, limão ou limão siciliano",
+      "name": "Gin Beefeater",
+      "price": 37.8
+    },
+    {
+      "id": "drinks-17",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Especiais — escolha a fruta: morango, maracujá, kiwi, mexerica, abacaxi, limão ou limão siciliano",
+      "name": "Vodka Absolut",
+      "price": 37.8
+    },
+    {
+      "id": "drinks-18",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Especiais — escolha a fruta: morango, maracujá, kiwi, mexerica, abacaxi, limão ou limão siciliano",
+      "name": "Vodka YVY",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-19",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Caip's Especiais — escolha a fruta: morango, maracujá, kiwi, mexerica, abacaxi, limão ou limão siciliano",
+      "name": "Gin Tanqueray",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-20",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Alexander",
+      "description": "Conhaque, Creme de Cacau, Creme de Leite e Canela",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-21",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Aperol Sprintz",
+      "description": "Prosecco, Aperol, Água gasosa, Gelo, Laranja",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-22",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Coquetel de Frutas com Álcool",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-23",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Coquetel de Frutas sem Álcool",
+      "price": 24.8
+    },
+    {
+      "id": "drinks-24",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Craberry",
+      "description": "Vodka Absolut, Malibu, Suco de Cranberry, Gelo, Limão",
+      "price": 39.8
+    },
+    {
+      "id": "drinks-25",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Isla Cosmo",
+      "description": "Vodka Absolut, Malibu, Suco de Romã, Gelo, Limão Taiti",
+      "price": 39.8
+    },
+    {
+      "id": "drinks-26",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Lagoa Azul",
+      "description": "Vodka Smirnoff, Curaçau Blue, Soda Limonada, Suco de Limão",
+      "price": 27.8
+    },
+    {
+      "id": "drinks-27",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Marguerita Tradicional",
+      "description": "Tequila, Licor Cointreau, Suco de Limão",
+      "price": 42.8
+    },
+    {
+      "id": "drinks-28",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Mojito",
+      "description": "Rum Carta Blanca, Água Gasosa, Limão, Açúcar, Gelo e Hortelã",
+      "price": 26.8
+    },
+    {
+      "id": "drinks-29",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Negroni",
+      "description": "Gin, Vermute Rosso, Campari, Gelo, Casca de Laranja e Alecrim fresco",
+      "price": 39.8
+    },
+    {
+      "id": "drinks-30",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Pina Colada",
+      "description": "Rum Bacardi, Malibu, Abacaxi, Leite de Coco, Leite Condensado",
+      "price": 29.8
+    },
+    {
+      "id": "drinks-31",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink's e Coquetéis",
+      "name": "Sexy On The Beach",
+      "description": "Vodka, Licor de Pêssego, Suco de Laranja, Suco de Cranberry, Gelo",
+      "price": 39.8
+    },
+    {
+      "id": "drinks-32",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Aperol",
+      "description": "Servido com Vodka Smirnoff, Suco de Laranja e Gelo",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-33",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Cuba Libre",
+      "description": "Rum Bacardi, Coca-Cola, Limão e Gelo",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-34",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Gin Tônica",
+      "description": "Gin Spiral, Água Tônica, Limão e Gelo",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-35",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Gin Tônica com Beefeater",
+      "description": "Gin, Água Tônica, Limão e Gelo",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-36",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Gin Tônica com Tanqueray",
+      "description": "Gin, Água Tônica, Limão e Gelo",
+      "price": 36.8
+    },
+    {
+      "id": "drinks-37",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Gin Tônica com Gin YVY",
+      "description": "Gin, Água Tônica, Limão e Gelo",
+      "price": 32.8
+    },
+    {
+      "id": "drinks-38",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Hi-Fi",
+      "description": "Vodka Smirnoff, Gelo e Fanta Laranja",
+      "price": 37.8
+    },
+    {
+      "id": "drinks-39",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Red Dryn com Beefeater",
+      "description": "Red Bull, Gin Beefeater, Laranja e Gelo",
+      "price": 37.8
+    },
+    {
+      "id": "drinks-40",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Red Dryn com Tanqueray",
+      "description": "Red Bull, Gin Tanqueray, Laranja e Gelo",
+      "price": 39.8
+    },
+    {
+      "id": "drinks-41",
+      "categoryId": "caipirinhas-drinks",
+      "group": "Drink Especiais",
+      "name": "Red Dryn com Gin YVY",
+      "description": "Red Bull, Gin YVY, Laranja e Gelo",
+      "price": 34.8
+    },
+
+    {
+      "id": "dest-01",
+      "categoryId": "destilados-licores",
+      "group": "Licores",
+      "name": "Amarula",
+      "price": 30.0
+    },
+    {
+      "id": "dest-02",
+      "categoryId": "destilados-licores",
+      "group": "Licores",
+      "name": "Licor 43",
+      "price": 30.0
+    },
+    {
+      "id": "dest-03",
+      "categoryId": "destilados-licores",
+      "group": "Licores",
+      "name": "Cointreau",
+      "price": 30.0
+    },
+    {
+      "id": "dest-04",
+      "categoryId": "destilados-licores",
+      "group": "Licores",
+      "name": "Frangelico",
+      "price": 30.0
+    },
+    {
+      "id": "dest-05",
+      "categoryId": "destilados-licores",
+      "group": "Whiskies 08 Anos",
+      "name": "Red Label",
+      "price": 25.0
+    },
+    {
+      "id": "dest-06",
+      "categoryId": "destilados-licores",
+      "group": "Whiskies 12 Anos",
+      "name": "Black Label, Buchanan's, Old Parr",
+      "price": 30.0
+    },
+    {
+      "id": "dest-07",
+      "categoryId": "destilados-licores",
+      "group": "Whiskies Bourbon",
+      "name": "Jack Daniel's",
+      "price": 30.0
+    },
+    {
+      "id": "dest-08",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Aguardente da Roça",
+      "price": 10.0
+    },
+    {
+      "id": "dest-09",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Germana",
+      "price": 15.0
+    },
+    {
+      "id": "dest-10",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Ouro do Vale",
+      "price": 15.0
+    },
+    {
+      "id": "dest-11",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Primeira de Minas",
+      "price": 10.0
+    },
+    {
+      "id": "dest-12",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Salinas",
+      "price": 10.0
+    },
+    {
+      "id": "dest-13",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Seleta",
+      "price": 10.0
+    },
+    {
+      "id": "dest-14",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Vale Verde",
+      "price": 10.0
+    },
+    {
+      "id": "dest-15",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Diginíssima Reserva",
+      "price": 20.0
+    },
+    {
+      "id": "dest-16",
+      "categoryId": "destilados-licores",
+      "group": "Aguardentes",
+      "name": "Diginíssima Blend Dois Carvalhos",
+      "price": 20.0
+    },
+    {
+      "id": "dest-17",
+      "categoryId": "destilados-licores",
+      "group": "Aperitivos",
+      "name": "Aperol",
+      "description": "Com gelo e fatia de laranja",
+      "price": 20.0
+    },
+    {
+      "id": "dest-18",
+      "categoryId": "destilados-licores",
+      "group": "Aperitivos",
+      "name": "Campari com Laranja",
+      "description": "Com gelo e suco de laranja",
+      "price": 20.0
+    },
+    {
+      "id": "dest-19",
+      "categoryId": "destilados-licores",
+      "group": "Aperitivos",
+      "name": "Campari com Limão",
+      "description": "Com gelo e fatia de limão",
+      "price": 15.0
+    },
+    {
+      "id": "dest-20",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Gin Beefeater",
+      "price": 20.0
+    },
+    {
+      "id": "dest-21",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Gin Tanqueray",
+      "price": 20.0
+    },
+    {
+      "id": "dest-22",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Gin YVY",
+      "price": 15.0
+    },
+    {
+      "id": "dest-23",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Rum Bacardi",
+      "price": 12.5
+    },
+    {
+      "id": "dest-24",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Tequila Cuervo",
+      "price": 25.0
+    },
+    {
+      "id": "dest-25",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Vodka Absolut",
+      "price": 20.0
+    },
+    {
+      "id": "dest-26",
+      "categoryId": "destilados-licores",
+      "group": "Destilados",
+      "name": "Vodka Smirnoff",
+      "price": 10.0
+    },
+    {
+      "id": "dest-27",
+      "categoryId": "destilados-licores",
+      "group": "Conhaques",
+      "name": "Domeq",
+      "price": 15.0
+    },
+    {
+      "id": "dest-28",
+      "categoryId": "destilados-licores",
+      "group": "Conhaques",
+      "name": "Dreher",
+      "price": 8.5
+    },
+    {
+      "id": "dest-29",
+      "categoryId": "destilados-licores",
+      "group": "Conhaques",
+      "name": "Macieira",
+      "price": 30.0
+    },
+
+    {
+      "id": "sucos-01",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Energy Drink e Outros",
+      "name": "H2O Tradicional / Limoneto 500ml",
+      "price": 8.8
+    },
+    {
+      "id": "sucos-02",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Energy Drink e Outros",
+      "name": "Monster 473ml",
+      "price": 15.8
+    },
+    {
+      "id": "sucos-03",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Energy Drink e Outros",
+      "name": "Red Bull 250ml",
+      "description": "Consultar sabores disponíveis",
+      "price": 16.8
+    },
+    {
+      "id": "sucos-04",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Energy Drink e Outros",
+      "name": "Smirnoff Ice",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-05",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Energy Drink e Outros",
+      "name": "Xeque Mate 355ml",
+      "price": 15.8
+    },
+    {
+      "id": "sucos-06",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Refrigerantes",
+      "name": "Coca-Cola Ks Litro",
+      "price": 12.8
+    },
+    {
+      "id": "sucos-07",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Refrigerantes",
+      "name": "Refrigerante Ks",
+      "price": 6.9
+    },
+    {
+      "id": "sucos-08",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Refrigerantes",
+      "name": "Refrigerante 2 litros",
+      "price": 17.9
+    },
+    {
+      "id": "sucos-09",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Refrigerantes",
+      "name": "Refrigerante 600ml",
+      "price": 9.8
+    },
+    {
+      "id": "sucos-10",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Refrigerantes",
+      "name": "Refrigerante lata 330ml",
+      "price": 7.5
+    },
+    {
+      "id": "sucos-11",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Del Vale (lata)",
+      "name": "Manga, Maracujá, Pêssego ou Uva",
+      "price": 7.5
+    },
+    {
+      "id": "sucos-12",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Del Vale (lata)",
+      "name": "Suco Vale 450ml",
+      "price": 8.8
+    },
+    {
+      "id": "sucos-13",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Água Mineral",
+      "name": "Água de Coco 330ml",
+      "price": 8.8
+    },
+    {
+      "id": "sucos-14",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Água Mineral",
+      "name": "Gasosa 500ml",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-15",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Água Mineral",
+      "name": "Natural 500ml",
+      "price": 6.9
+    },
+    {
+      "id": "sucos-16",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Água Mineral",
+      "name": "Gasosa com Shot de Limão 500ml",
+      "price": 6.0
+    },
+    {
+      "id": "sucos-17",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Abacaxi com Água de Coco e Gengibre",
+      "price": 15.8
+    },
+    {
+      "id": "sucos-18",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Abacaxi com Laranja e Hortelã",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-19",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Abacaxi Puro com Água e Hortelã",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-20",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Acerola com Laranja",
+      "price": 12.8
+    },
+    {
+      "id": "sucos-21",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Cenoura com Laranja, Gengibre e Mel",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-22",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Citrus",
+      "description": "Limão, Laranja, Abacaxi",
+      "price": 12.8
+    },
+    {
+      "id": "sucos-23",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Frutas Vermelhas com Laranja",
+      "description": "Morango, Tangerina, Amora e Framboesa",
+      "price": 13.9
+    },
+    {
+      "id": "sucos-24",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Laranja",
+      "price": 12.8
+    },
+    {
+      "id": "sucos-25",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Limonada Suíça com Limão Siciliano",
+      "price": 11.8
+    },
+    {
+      "id": "sucos-26",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Limonada Suíça",
+      "price": 11.8
+    },
+    {
+      "id": "sucos-27",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Maracujá",
+      "description": "Com água ou laranja",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-28",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Maracujá com Morango",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-29",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Morango",
+      "description": "Água, laranja ou com leite",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-30",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Morango com Água de Coco e Gengibre",
+      "price": 15.8
+    },
+    {
+      "id": "sucos-31",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Suco Verde",
+      "description": "Laranja, Limão, Couve, Mel, Gengibre e Hortelã",
+      "price": 12.8
+    },
+    {
+      "id": "sucos-32",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais 330ml",
+      "name": "Suco Verde Siciliano",
+      "description": "Laranja, Couve, Abacaxi, Gengibre e Hortelã",
+      "price": 13.8
+    },
+    {
+      "id": "sucos-33",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Abacaxi com Água de Coco e Gengibre",
+      "price": 34.8
+    },
+    {
+      "id": "sucos-34",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Abacaxi com Hortelã",
+      "price": 29.9
+    },
+    {
+      "id": "sucos-35",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Abacaxi com Laranja ou Puro",
+      "price": 29.9
+    },
+    {
+      "id": "sucos-36",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Acerola com Laranja",
+      "price": 29.9
+    },
+    {
+      "id": "sucos-37",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Cenoura com Laranja, Gengibre e Mel",
+      "price": 32.8
+    },
+    {
+      "id": "sucos-38",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Citrus",
+      "description": "Laranja, Abacaxi, Limão",
+      "price": 27.8
+    },
+    {
+      "id": "sucos-39",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Frutas Vermelhas com Laranja",
+      "description": "Morango, Maçã, Amora e Framboesa",
+      "price": 34.8
+    },
+    {
+      "id": "sucos-40",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Laranja",
+      "price": 25.5
+    },
+    {
+      "id": "sucos-41",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Limonada Suíça com Água Gasosa",
+      "price": 25.5
+    },
+    {
+      "id": "sucos-42",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Limonada Suíça com Limão Siciliano",
+      "price": 25.5
+    },
+    {
+      "id": "sucos-43",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Maracujá com Água",
+      "price": 29.9
+    },
+    {
+      "id": "sucos-44",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Maracujá com Laranja",
+      "price": 29.9
+    },
+    {
+      "id": "sucos-45",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Maracujá com Morango",
+      "price": 32.0
+    },
+    {
+      "id": "sucos-46",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Morango com Água de Coco e Gengibre",
+      "price": 34.8
+    },
+    {
+      "id": "sucos-47",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Morango com Laranja",
+      "price": 32.0
+    },
+    {
+      "id": "sucos-48",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Morango com Leite",
+      "price": 32.0
+    },
+    {
+      "id": "sucos-49",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Suco Verde",
+      "description": "Couve, Laranja, Limão, Gengibre, Mel e Hortelã",
+      "price": 27.8
+    },
+    {
+      "id": "sucos-50",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 750ml",
+      "name": "Suco Verde Siciliano",
+      "description": "Laranja, Couve, Abacaxi, Gengibre e Hortelã",
+      "price": 32.8
+    },
+    {
+      "id": "sucos-51",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Abacaxi com Hortelã ou Laranja",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-52",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Acerola com Laranja",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-53",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Laranja",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-54",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Limonada Suíça com Água Gasosa",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-55",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Limonada Suíça com Limão Siciliano",
+      "price": 42.8
+    },
+    {
+      "id": "sucos-56",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Maracujá com Água",
+      "price": 42.8
+    },
+    {
+      "id": "sucos-57",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Maracujá com Laranja ou Leite",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-58",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Maracujá com Morango",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-59",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Morango com Laranja",
+      "price": 49.8
+    },
+    {
+      "id": "sucos-60",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Suco Verde",
+      "description": "Couve, Laranja, Limão e Mel",
+      "price": 45.8
+    },
+    {
+      "id": "sucos-61",
+      "categoryId": "sucos-nao-alcoolicos",
+      "group": "Sucos Naturais em Jarra 1.500ml",
+      "name": "Suco Verde Siciliano",
+      "description": "Laranja, Couve, Abacaxi, Gengibre e Hortelã",
+      "price": 45.8
+    },
+
+    {
+      "id": "petiscos-01",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Alho Poró",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-02",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Carne de Sol",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-03",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Frango com Requeijão",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-04",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Quatro Queijos",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-05",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Tomate Seco",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-06",
+      "categoryId": "petiscos",
+      "group": "Pães de Alho",
+      "name": "Tradicional",
+      "price": 9.9
+    },
+    {
+      "id": "petiscos-07",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Alho Poró com Requeijão",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-08",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Carne Seca com Requeijão",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-09",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Carne",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-10",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Misto: Carne e Queijo",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-11",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Queijo com Orégano",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-12",
+      "categoryId": "petiscos",
+      "group": "Pastéis de Angu (10 unidades)",
+      "name": "Rabada com Requeijão",
+      "price": 39.8
+    },
+    {
+      "id": "petiscos-13",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Almôndega de Queijo",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-14",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Boi",
+      "price": 18.5
+    },
+    {
+      "id": "petiscos-15",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Coração",
+      "price": 18.5
+    },
+    {
+      "id": "petiscos-16",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Medalhão de Frango",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-17",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Medalhão de Queijo",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-18",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Muçarela com Mel",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-19",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Picanha Novilho",
+      "price": 20.0
+    },
+    {
+      "id": "petiscos-20",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Picanha Suína",
+      "price": 24.8
+    },
+    {
+      "id": "petiscos-21",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Queijo Coalho com Mel",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-22",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Salmão",
+      "price": 20.0
+    },
+    {
+      "id": "petiscos-23",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Salsichão",
+      "price": 24.8
+    },
+    {
+      "id": "petiscos-24",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Tilápia",
+      "price": 10.0
+    },
+    {
+      "id": "petiscos-25",
+      "categoryId": "petiscos",
+      "group": "Espetinhos",
+      "name": "Tulipa de Frango",
+      "price": 17.5
+    },
+    {
+      "id": "petiscos-26",
+      "categoryId": "petiscos",
+      "group": "Comida de Buteco 2024/2025/2026",
+      "name": "Boi Molhado",
+      "description": "Blend de carne cozida servida com mandioca cozida e manteiga de garrafa",
+      "price": 69.8
+    },
+    {
+      "id": "petiscos-27",
+      "categoryId": "petiscos",
+      "group": "Comida de Buteco 2024/2025/2026",
+      "name": "Tulipa do Cheff",
+      "description": "Tulipas de frango envolvidas no molho agridoce à base de goiabada, requeijão cremoso, mel, mostarda, cebola assada e queijo mussarela",
+      "price": 56.8
+    },
+    {
+      "id": "petiscos-28",
+      "categoryId": "petiscos",
+      "group": "Comida de Buteco 2024/2025/2026",
+      "name": "Glu Glu à Baiana",
+      "description": "Pescoço de peru servido com angu à baiana, mini batata, mussarela, alho poró, pimenta biquinho e tomate cereja",
+      "price": 52.8
+    },
+
+    {
+      "id": "porcoes-01",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Abacaxi com Provolone",
+      "description": "02 rodelas, aprox. 400g",
+      "price": 54.8
+    },
+    {
+      "id": "porcoes-02",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Boi Molhado com Mandioca Cozida na Manteiga de Garrafa",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-03",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Ceviche de Salmão",
+      "description": "200g",
+      "price": 52.8
+    },
+    {
+      "id": "porcoes-04",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Ceviche de Tilápia",
+      "description": "200g",
+      "price": 42.8
+    },
+    {
+      "id": "porcoes-05",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Costelinha ao Molho Barbecue com Fritas",
+      "description": "350g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-06",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Costelinha ao Molho de Cana com Fritas",
+      "description": "350g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-07",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Fígado Acebolado com Jiló",
+      "description": "300g",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-08",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Tábua de Frios",
+      "description": "Palmito, parma, copa, azeitonas, salaminho, peito de peru e queijos",
+      "price": 99.8
+    },
+    {
+      "id": "porcoes-09",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Filet Gratinado ao Molho Gorgonzola com Tomate Seco",
+      "description": "250g",
+      "price": 69.8
+    },
+    {
+      "id": "porcoes-10",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Frango a Passarinho",
+      "description": "500g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-11",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Fritas com Queijo e Bacon",
+      "description": "300g",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-12",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Fritas com Queijo",
+      "description": "300g",
+      "price": 32.8
+    },
+    {
+      "id": "porcoes-13",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Fritas",
+      "description": "300g",
+      "price": 29.8
+    },
+    {
+      "id": "porcoes-14",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Ancho com Fritas",
+      "description": "350g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-15",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Contra com Fritas",
+      "description": "350g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-16",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Contra com Mandioca Cozida e Manteiga de Garrafa",
+      "description": "300g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-17",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Filet Mignon Acebolado",
+      "description": "350g",
+      "price": 89.8
+    },
+    {
+      "id": "porcoes-18",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Filet Mignon com Fritas",
+      "description": "350g",
+      "price": 89.8
+    },
+    {
+      "id": "porcoes-19",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Filet Mignon com Fritas, Queijo e Bacon",
+      "description": "350g",
+      "price": 99.8
+    },
+    {
+      "id": "porcoes-20",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Filet Mignon com Mandioca Cozida e Manteiga de Garrafa",
+      "description": "350g",
+      "price": 89.8
+    },
+    {
+      "id": "porcoes-21",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Picanha Suína Acebolada com Fritas",
+      "description": "350g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-22",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Picanha Suína Acebolada com Mandioca Frita",
+      "description": "350g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-23",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Tilápia com Molho Tártaro",
+      "description": "350g",
+      "price": 45.8
+    },
+    {
+      "id": "porcoes-24",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Isca de Tilápia com Molho Tártaro, Fritas, Queijo e Bacon",
+      "description": "350g",
+      "price": 59.8
+    },
+    {
+      "id": "porcoes-25",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Jiló Empanado",
+      "description": "250g",
+      "price": 29.8
+    },
+    {
+      "id": "porcoes-26",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Mexidão Individual",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-27",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Pastéis Comuns Mistos: Queijo e Carne",
+      "description": "06 unidades",
+      "price": 24.8
+    },
+    {
+      "id": "porcoes-28",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Polenta a Palito Frita",
+      "description": "350g",
+      "price": 32.8
+    },
+    {
+      "id": "porcoes-29",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Queijo Pachá",
+      "description": "300g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-30",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Tiras de Picanha com Mandioca Cozida na Manteiga de Garrafa",
+      "description": "350g",
+      "price": 99.8
+    },
+    {
+      "id": "porcoes-31",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Tiras de Picanha com Fritas",
+      "description": "350g",
+      "price": 99.8
+    },
+    {
+      "id": "porcoes-32",
+      "categoryId": "porcoes",
+      "group": "Meia Porção",
+      "name": "Torresmo Barriga com Cebola Assada",
+      "description": "350g",
+      "price": 49.8
+    },
+    {
+      "id": "porcoes-33",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Bolinho de Abóbora com Carne Seca",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-34",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Bolinho de Bacalhau",
+      "description": "270g, aprox. 12 a 15 unidades",
+      "price": 42.8
+    },
+    {
+      "id": "porcoes-35",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Bolinho de Costela com Carne Seca",
+      "price": 42.8
+    },
+    {
+      "id": "porcoes-36",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Bolinho de Mandioca com Carne Seca",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-37",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Carpaccio de Carne",
+      "description": "Servido com molho de alcaparras, queijo parmesão e torradas",
+      "price": 59.8
+    },
+    {
+      "id": "porcoes-38",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Ceviche de Salmão",
+      "description": "400g, servido com torradas à moda da casa",
+      "price": 99.8
+    },
+    {
+      "id": "porcoes-39",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Ceviche de Tilápia",
+      "description": "400g, servido com torradas à moda da casa",
+      "price": 69.8
+    },
+    {
+      "id": "porcoes-40",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Costelinha ao Melaço de Cana com Mandioca Frita",
+      "description": "500g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-41",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Costelinha ao Molho Barbecue com Fritas",
+      "description": "500g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-42",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Fígado Acebolado com Jiló",
+      "description": "400g",
+      "price": 54.8
+    },
+    {
+      "id": "porcoes-43",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Filet Gratinado ao Molho Gorgonzola com Tomate Seco",
+      "description": "500g",
+      "price": 132.8
+    },
+    {
+      "id": "porcoes-44",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Frango a Passarinho",
+      "description": "1kg",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-45",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Frango Gratinado com Requeijão Catupiry e Tomate Seco",
+      "description": "800g",
+      "price": 120.9
+    },
+    {
+      "id": "porcoes-46",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Fritas",
+      "description": "400g",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-47",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Fritas com Queijo",
+      "description": "400g",
+      "price": 42.8
+    },
+    {
+      "id": "porcoes-48",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Fritas com Queijo e Bacon",
+      "description": "400g",
+      "price": 52.8
+    },
+    {
+      "id": "porcoes-49",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Ancho com Provolone Assado e Geleia de Pimenta",
+      "description": "450g",
+      "price": 130.8
+    },
+    {
+      "id": "porcoes-50",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Ancho Filé com Fritas",
+      "description": "450g",
+      "price": 120.8
+    },
+    {
+      "id": "porcoes-51",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Contra Filé com Fritas",
+      "description": "450g",
+      "price": 120.8
+    },
+    {
+      "id": "porcoes-52",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Filet Mignon Acebolada",
+      "description": "450g",
+      "price": 129.8
+    },
+    {
+      "id": "porcoes-53",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Filet Mignon com Fritas",
+      "description": "450g",
+      "price": 130.8
+    },
+    {
+      "id": "porcoes-54",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Filet Mignon com Fritas, Queijo e Bacon",
+      "description": "450g",
+      "price": 140.8
+    },
+    {
+      "id": "porcoes-55",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Filet Mignon Empanada",
+      "description": "400g",
+      "price": 130.8
+    },
+    {
+      "id": "porcoes-56",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca de Tilápia com Molho Tártaro",
+      "description": "500g",
+      "price": 79.8
+    },
+    {
+      "id": "porcoes-57",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Isca Frango Empanada",
+      "description": "600g, acompanha molho de limão siciliano e geleia de pimenta",
+      "price": 59.8
+    },
+    {
+      "id": "porcoes-58",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Linguiça Caseira",
+      "description": "500g, acompanha batata rústica e geleia de pimenta",
+      "price": 69.8
+    },
+    {
+      "id": "porcoes-59",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Mexidão da Casa",
+      "description": "Serve 02 pessoas",
+      "price": 69.8
+    },
+    {
+      "id": "porcoes-60",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Pastéis Comuns Mistos: Queijo e Carne",
+      "description": "12 unidades",
+      "price": 39.8
+    },
+    {
+      "id": "porcoes-61",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Queijo Pachá",
+      "description": "450g",
+      "price": 74.8
+    },
+    {
+      "id": "porcoes-62",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tábua de Frios",
+      "description": "Palmito, parma, copa, azeitonas, salaminho, peito de peru e queijos",
+      "price": 149.8
+    },
+    {
+      "id": "porcoes-63",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tábua Mista",
+      "description": "Costelinha, queijos, palmito, torresmo, linguiça, azeitonas e mandioca",
+      "price": 140.8
+    },
+    {
+      "id": "porcoes-64",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tilápia com Fritas, Queijo e Bacon",
+      "description": "400g",
+      "price": 110.8
+    },
+    {
+      "id": "porcoes-65",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tiras de Picanha com Fritas",
+      "description": "450g",
+      "price": 140.8
+    },
+    {
+      "id": "porcoes-66",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tiras de Picanha com Mandioca Cozida na Manteiga de Garrafa",
+      "description": "450g",
+      "price": 140.8
+    },
+    {
+      "id": "porcoes-67",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Torresmo Barriga com Cebola Assada",
+      "description": "500g",
+      "price": 69.8
+    },
+    {
+      "id": "porcoes-68",
+      "categoryId": "porcoes",
+      "group": "Porção Inteira",
+      "name": "Tropeiro",
+      "description": "Acompanha 02 ovos fritos, couve, torresmo e arroz branco",
+      "price": 69.8
     }
   ]
 }

@@ -1,9 +1,15 @@
-import { Flame, UtensilsCrossed } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { UtensilsCrossed } from 'lucide-react'
 import Banner from '@/components/layout/Banner'
 import AnimatedSection from '@/components/common/AnimatedSection'
 import PageContainer from '@/components/ui/PageContainer'
 import SectionTitle from '@/components/ui/SectionTitle'
+import {
+  buttonBaseClasses,
+  buttonVariantClasses,
+} from '@/constants/buttonStyles'
 import { restaurantConfig } from '@/constants/restaurant.config'
+import { cn } from '@/utils/cn'
 
 function Home() {
   return (
@@ -24,11 +30,17 @@ function Home() {
           <div className="bg-brasa-500/10 text-brasa-400 flex h-14 w-14 items-center justify-center rounded-full">
             <UtensilsCrossed className="h-7 w-7" aria-hidden />
           </div>
-          <SectionTitle title="Cardápio completo em breve" />
-          <p className="text-cream-dim flex max-w-md items-center justify-center gap-2 text-sm sm:text-base">
-            <Flame className="text-flame-500 h-4 w-4 shrink-0" aria-hidden />
-            Estamos preparando tudo na brasa para você.
+          <SectionTitle title="Conheça nosso cardápio" />
+          <p className="text-cream-dim max-w-md text-sm sm:text-base">
+            Cervejas artesanais, drinks autorais, petiscos e porções — tudo na
+            brasa.
           </p>
+          <Link
+            to="/cardapio"
+            className={cn(buttonBaseClasses, buttonVariantClasses.outline)}
+          >
+            Ver cardápio completo
+          </Link>
         </PageContainer>
       </AnimatedSection>
     </main>

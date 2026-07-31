@@ -29,3 +29,12 @@
   --spacing-section: 4rem;
   --spacing-section-lg: 6rem;
 }
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

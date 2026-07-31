@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import Logo from '@/components/ui/Logo'
-import Button from '@/components/ui/Button'
+import {
+  buttonBaseClasses,
+  buttonVariantClasses,
+} from '@/constants/buttonStyles'
 import PageContainer from '@/components/ui/PageContainer'
 import { fadeUp, staggerChildren } from '@/constants/animations'
 import { restaurantConfig } from '@/constants/restaurant.config'
+import { cn } from '@/utils/cn'
 
 function Banner() {
   return (
@@ -51,7 +56,12 @@ function Banner() {
           </motion.p>
 
           <motion.div variants={fadeUp}>
-            <Button disabled>Cardápio em breve</Button>
+            <Link
+              to="/cardapio"
+              className={cn(buttonBaseClasses, buttonVariantClasses.primary)}
+            >
+              Ver cardápio
+            </Link>
           </motion.div>
         </motion.div>
       </PageContainer>
