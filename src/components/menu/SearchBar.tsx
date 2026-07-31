@@ -9,7 +9,10 @@ interface SearchBarProps {
 
 function SearchBar({ value, onChange }: SearchBarProps) {
   return (
-    <div className="relative" role="search">
+    <div
+      className="relative rounded-full transition-shadow duration-300 focus-within:shadow-[0_0_24px_-6px_rgba(255,106,26,0.35)]"
+      role="search"
+    >
       <Search
         className="text-cream-dim pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2"
         aria-hidden

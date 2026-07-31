@@ -16,7 +16,7 @@ function AnimatedSection({ children, className, id }: AnimatedSectionProps) {
       className={cn('py-section', className)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2, margin: '0px 0px -80px 0px' }}
       variants={fadeUp}
     >
       {children}

@@ -10,8 +10,17 @@ function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-surface border-wood-800/60 mt-auto border-t">
-      <PageContainer className="flex flex-col items-center gap-6 py-10 text-center">
+    <footer className="bg-surface border-wood-800/60 relative mt-auto overflow-hidden border-t">
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(180deg, var(--color-wood-800) 0px, var(--color-wood-800) 2px, transparent 2px, transparent 24px)',
+        }}
+        aria-hidden
+      />
+
+      <PageContainer className="relative flex flex-col items-center gap-7 py-12 text-center sm:py-14">
         <Link
           to="/"
           className={cn('flex flex-col items-center gap-3', focusRingClasses)}
@@ -24,7 +33,7 @@ function Footer() {
 
         <WoodDivider />
 
-        <div className="text-cream-dim space-y-1 text-sm">
+        <div className="text-cream-dim space-y-1.5 text-sm leading-relaxed">
           <p>
             {restaurantConfig.address.street} — {restaurantConfig.address.city}/
             {restaurantConfig.address.state}
@@ -36,7 +45,7 @@ function Footer() {
           ))}
         </div>
 
-        <p className="text-cream-dim/70 text-xs">
+        <p className="text-cream-dim/60 text-xs tracking-wide">
           © {year} {restaurantConfig.name}. Todos os direitos reservados.
         </p>
       </PageContainer>

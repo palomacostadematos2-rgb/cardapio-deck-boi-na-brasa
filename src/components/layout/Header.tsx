@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
+import { useMotionValueEvent, useScroll } from 'framer-motion'
 import Logo from '@/components/ui/Logo'
 import PageContainer from '@/components/ui/PageContainer'
 import NavLinks from '@/components/layout/NavLinks'
@@ -11,6 +12,7 @@ import { cn } from '@/utils/cn'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
   const [lastPathname, setLastPathname] = useState(location.pathname)
 
@@ -19,8 +21,18 @@ function Header() {
     setMenuOpen(false)
   }
 
+  const { scrollY } = useScroll()
+  useMotionValueEvent(scrollY, 'change', (value) => {
+    setScrolled(value > 8)
+  })
+
   return (
-    <header className="border-wood-800/60 bg-background/90 sticky top-0 z-50 w-full border-b backdrop-blur">
+    <header
+      className={cn(
+        'border-wood-800/60 bg-background/90 sticky top-0 z-50 w-full border-b backdrop-blur transition-shadow duration-300',
+        scrolled && 'shadow-[0_8px_24px_-12px_rgba(0,0,0,0.6)]',
+      )}
+    >
       <PageContainer className="flex h-16 items-center justify-between">
         <Link
           to="/"

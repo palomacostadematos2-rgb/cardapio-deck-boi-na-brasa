@@ -14,7 +14,7 @@ function Banner() {
   return (
     <section className="from-surface via-background to-background relative overflow-hidden bg-gradient-to-b">
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-30"
         style={{
           backgroundImage:
             'repeating-linear-gradient(180deg, var(--color-wood-800) 0px, var(--color-wood-800) 3px, transparent 3px, transparent 28px)',
@@ -23,14 +23,18 @@ function Banner() {
       />
       <div className="from-background pointer-events-none absolute inset-0 bg-gradient-to-t via-transparent to-transparent" />
 
-      <PageContainer className="relative flex flex-col items-center gap-6 py-16 text-center sm:py-24">
+      <PageContainer className="relative flex flex-col items-center gap-6 py-20 text-center sm:py-28">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={staggerChildren}
           className="flex flex-col items-center gap-6"
         >
-          <motion.div variants={fadeUp}>
+          <motion.div variants={fadeUp} className="relative">
+            <div
+              className="bg-flame-500/25 absolute inset-0 -z-10 scale-125 rounded-full blur-2xl"
+              aria-hidden
+            />
             <Logo size="xl" />
           </motion.div>
 

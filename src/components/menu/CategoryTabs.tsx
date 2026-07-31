@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { categoryIconMap } from '@/constants/categoryIcons'
 import { focusRingClasses } from '@/constants/a11y'
 import type { ProductCategory } from '@/types/product'
@@ -36,13 +37,20 @@ function CategoryTabs({
             aria-controls={panelId}
             onClick={() => onChange(category.id)}
             className={cn(
-              'flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors',
+              'relative flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors',
               focusRingClasses,
               isActive
-                ? 'bg-brasa-500 border-brasa-500 text-cream'
+                ? 'border-brasa-500 text-cream'
                 : 'border-wood-800 text-cream-dim hover:border-wood-600',
             )}
           >
+            {isActive && (
+              <motion.span
+                layoutId="category-tab-pill"
+                transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+                className="bg-brasa-500 absolute inset-0 -z-10 rounded-full"
+              />
+            )}
             {Icon && <Icon className="h-4 w-4" aria-hidden />}
             {category.name}
           </button>

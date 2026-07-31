@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import PageTransition from '@/components/layout/PageTransition'
 import { focusRingClasses } from '@/constants/a11y'
 import { cn } from '@/utils/cn'
 
@@ -17,7 +17,7 @@ function RootLayout() {
         Pular para o conteúdo
       </a>
       <Header />
-      <Outlet />
+      <PageTransition />
       <Footer />
     </div>
   )

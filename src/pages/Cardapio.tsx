@@ -8,6 +8,7 @@ import SearchBar from '@/components/menu/SearchBar'
 import SearchResults from '@/components/menu/SearchResults'
 import { getMenuData } from '@/utils/menuData'
 import { useProductSearch } from '@/hooks/useProductSearch'
+import { pageFade } from '@/constants/animations'
 
 const { categories, products } = getMenuData()
 
@@ -36,10 +37,10 @@ function Cardapio() {
           {isSearching ? (
             <motion.div
               key="search"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={pageFade}
             >
               <SearchResults
                 query={query}
@@ -50,18 +51,20 @@ function Cardapio() {
           ) : (
             <motion.div
               key="browse"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={pageFade}
               className="flex flex-col gap-8"
             >
-              <CategoryTabs
-                categories={categories}
-                activeId={activeId}
-                onChange={setActiveId}
-                panelId={panelId}
-              />
+              <div className="border-wood-800/40 bg-background/95 sticky top-16 z-40 -mx-4 border-b px-4 backdrop-blur sm:static sm:mx-0 sm:border-none sm:bg-transparent sm:px-0 sm:backdrop-blur-none">
+                <CategoryTabs
+                  categories={categories}
+                  activeId={activeId}
+                  onChange={setActiveId}
+                  panelId={panelId}
+                />
+              </div>
               <ProductList
                 products={activeProducts}
                 id={panelId}
