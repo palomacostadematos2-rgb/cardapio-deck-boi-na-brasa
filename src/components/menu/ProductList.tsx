@@ -2,32 +2,35 @@ import { motion } from 'framer-motion'
 import type { Product } from '@/types/product'
 import ProductGroup from '@/components/menu/ProductGroup'
 import { fadeUp, staggerChildren } from '@/constants/animations'
+import { groupProducts } from '@/utils/groupProducts'
 
 interface ProductListProps {
   products: Product[]
+  id?: string
+  labelledBy?: string
 }
 
-function groupProducts(products: Product[]) {
-  const groups = new Map<string, Product[]>()
-
-  for (const product of products) {
-    const key = product.group ?? ''
-    const existing = groups.get(key)
-    if (existing) {
-      existing.push(product)
-    } else {
-      groups.set(key, [product])
-    }
-  }
-
-  return Array.from(groups.entries())
-}
-
-function ProductList({ products }: ProductListProps) {
+function ProductList({ products, id, labelledBy }: ProductListProps) {
   const groups = groupProducts(products)
+
+  if (products.length === 0) {
+    return (
+      <div
+        id={id}
+        role="tabpanel"
+        aria-labelledby={labelledBy}
+        className="text-cream-dim py-12 text-center text-sm sm:text-base"
+      >
+        Nenhum produto disponível nesta categoria.
+      </div>
+    )
+  }
 
   return (
     <motion.div
+      id={id}
+      role="tabpanel"
+      aria-labelledby={labelledBy}
       key={products[0]?.categoryId}
       initial="hidden"
       animate="visible"

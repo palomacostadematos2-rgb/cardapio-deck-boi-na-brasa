@@ -4,7 +4,7 @@ import type { Product, ProductCategory } from '@/types/product'
 const categories = menuData.categories as ProductCategory[]
 const products = menuData.products as Product[]
 
-export function useMenuData() {
+export function getMenuData() {
   return { categories, products }
 }
 

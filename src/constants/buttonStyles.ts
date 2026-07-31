@@ -1,3 +1,5 @@
+import { focusRingClasses } from '@/constants/a11y'
+
 export type ButtonVariant = 'primary' | 'outline' | 'ghost'
 
 export const buttonVariantClasses: Record<ButtonVariant, string> = {
@@ -7,5 +9,4 @@ export const buttonVariantClasses: Record<ButtonVariant, string> = {
   ghost: 'text-cream hover:bg-surface-light',
 }
 
-export const buttonBaseClasses =
-  'rounded-full px-6 py-3 font-sans text-sm font-medium tracking-wide transition-colors disabled:cursor-not-allowed disabled:opacity-60'
+export const buttonBaseClasses = `rounded-full px-6 py-3 font-sans text-sm font-medium tracking-wide transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${focusRingClasses}`

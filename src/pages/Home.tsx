@@ -13,7 +13,7 @@ import { cn } from '@/utils/cn'
 
 function Home() {
   return (
-    <main>
+    <main id="conteudo">
       <Banner />
 
       <AnimatedSection id="sobre">

@@ -6,11 +6,12 @@ import CategoryTabs from '@/components/menu/CategoryTabs'
 import ProductList from '@/components/menu/ProductList'
 import SearchBar from '@/components/menu/SearchBar'
 import SearchResults from '@/components/menu/SearchResults'
-import { useMenuData } from '@/hooks/useMenuData'
+import { getMenuData } from '@/utils/menuData'
 import { useProductSearch } from '@/hooks/useProductSearch'
 
+const { categories, products } = getMenuData()
+
 function Cardapio() {
-  const { categories, products } = useMenuData()
   const [activeId, setActiveId] = useState(categories[0]?.id ?? '')
   const [query, setQuery] = useState('')
 
@@ -18,15 +19,16 @@ function Cardapio() {
 
   const activeProducts = useMemo(
     () => products.filter((product) => product.categoryId === activeId),
-    [products, activeId],
+    [activeId],
   )
 
   const isSearching = searchResults !== null
+  const panelId = `panel-${activeId}`
 
   return (
-    <main className="py-section">
+    <main id="conteudo" className="py-section">
       <PageContainer className="flex flex-col gap-8">
-        <SectionTitle eyebrow="Tudo na brasa" title="Cardápio" />
+        <SectionTitle as="h1" eyebrow="Tudo na brasa" title="Cardápio" />
 
         <SearchBar value={query} onChange={setQuery} />
 
@@ -58,8 +60,13 @@ function Cardapio() {
                 categories={categories}
                 activeId={activeId}
                 onChange={setActiveId}
+                panelId={panelId}
               />
-              <ProductList products={activeProducts} />
+              <ProductList
+                products={activeProducts}
+                id={panelId}
+                labelledBy={`tab-${activeId}`}
+              />
             </motion.div>
           )}
         </AnimatePresence>

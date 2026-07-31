@@ -2,6 +2,8 @@ import { Menu } from 'lucide-react'
 import Logo from '@/components/ui/Logo'
 import PageContainer from '@/components/ui/PageContainer'
 import { restaurantConfig } from '@/constants/restaurant.config'
+import { focusRingClasses } from '@/constants/a11y'
+import { cn } from '@/utils/cn'
 
 function Header() {
   return (
@@ -17,7 +19,10 @@ function Header() {
         <button
           type="button"
           aria-label="Abrir menu"
-          className="text-cream hover:text-flame-300 transition-colors"
+          className={cn(
+            'text-cream hover:text-flame-300 rounded-full transition-colors',
+            focusRingClasses,
+          )}
         >
           <Menu className="h-6 w-6" />
         </button>

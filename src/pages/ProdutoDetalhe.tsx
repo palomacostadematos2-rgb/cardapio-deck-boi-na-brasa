@@ -5,9 +5,11 @@ import { ArrowLeft } from 'lucide-react'
 import PageContainer from '@/components/ui/PageContainer'
 import WoodDivider from '@/components/ui/WoodDivider'
 import CategoryBadge from '@/components/menu/CategoryBadge'
-import { getCategoryById, getProductById } from '@/hooks/useMenuData'
+import { getCategoryById, getProductById } from '@/utils/menuData'
 import { fadeUp, staggerChildren } from '@/constants/animations'
+import { focusRingClasses } from '@/constants/a11y'
 import { formatCurrency } from '@/utils/formatCurrency'
+import { cn } from '@/utils/cn'
 
 function ProdutoDetalhe() {
   const { productId } = useParams<{ productId: string }>()
@@ -23,7 +25,7 @@ function ProdutoDetalhe() {
   }
 
   return (
-    <main className="py-section">
+    <main id="conteudo" className="py-section">
       <PageContainer className="mx-auto max-w-xl">
         <motion.div
           initial="hidden"
@@ -34,7 +36,10 @@ function ProdutoDetalhe() {
           <motion.div variants={fadeUp}>
             <Link
               to="/cardapio"
-              className="text-cream-dim hover:text-cream inline-flex items-center gap-2 text-sm transition-colors"
+              className={cn(
+                'text-cream-dim hover:text-cream inline-flex items-center gap-2 rounded-full text-sm transition-colors',
+                focusRingClasses,
+              )}
             >
               <ArrowLeft className="h-4 w-4" aria-hidden />
               Voltar ao cardápio

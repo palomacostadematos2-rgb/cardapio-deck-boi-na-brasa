@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { categoryIconMap } from '@/constants/categoryIcons'
 import type { ProductCategory } from '@/types/product'
 import { cn } from '@/utils/cn'
@@ -23,4 +24,4 @@ function CategoryBadge({ category, className }: CategoryBadgeProps) {
   )
 }
 
-export default CategoryBadge
+export default memo(CategoryBadge)
