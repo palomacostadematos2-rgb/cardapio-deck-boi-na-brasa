@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom'
 import Logo from '@/components/ui/Logo'
 import PageContainer from '@/components/ui/PageContainer'
 import WoodDivider from '@/components/ui/WoodDivider'
 import { restaurantConfig } from '@/constants/restaurant.config'
+import { focusRingClasses } from '@/constants/a11y'
+import { cn } from '@/utils/cn'
 
 function Footer() {
   const year = new Date().getFullYear()
@@ -9,16 +12,15 @@ function Footer() {
   return (
     <footer className="bg-surface border-wood-800/60 mt-auto border-t">
       <PageContainer className="flex flex-col items-center gap-6 py-10 text-center">
-        <Logo size="sm" />
-
-        <div>
-          <p className="font-display text-cream text-lg tracking-wide uppercase">
+        <Link
+          to="/"
+          className={cn('flex flex-col items-center gap-3', focusRingClasses)}
+        >
+          <Logo size="sm" />
+          <span className="font-display text-cream text-lg tracking-wide uppercase">
             {restaurantConfig.shortName}
-          </p>
-          <p className="text-cream-dim mt-1 text-sm">
-            {restaurantConfig.tagline}
-          </p>
-        </div>
+          </span>
+        </Link>
 
         <WoodDivider />
 
