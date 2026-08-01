@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Outlet, useLocation } from 'react-router-dom'
+import PageLoader from '@/components/common/PageLoader'
 import { pageFade } from '@/constants/animations'
 
 function PageTransition() {
@@ -15,7 +17,9 @@ function PageTransition() {
         variants={pageFade}
         className="flex flex-1 flex-col"
       >
-        <Outlet />
+        <Suspense fallback={<PageLoader />}>
+          <Outlet />
+        </Suspense>
       </motion.div>
     </AnimatePresence>
   )

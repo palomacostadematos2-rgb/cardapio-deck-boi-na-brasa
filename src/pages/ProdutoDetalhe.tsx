@@ -6,6 +6,7 @@ import PageContainer from '@/components/ui/PageContainer'
 import WoodDivider from '@/components/ui/WoodDivider'
 import CategoryBadge from '@/components/menu/CategoryBadge'
 import ProductImage from '@/components/menu/ProductImage'
+import Seo from '@/components/common/Seo'
 import { getCategoryById, getProductById } from '@/utils/menuData'
 import { fadeUp, scaleIn, staggerChildren } from '@/constants/animations'
 import { focusRingClasses } from '@/constants/a11y'
@@ -27,6 +28,15 @@ function ProdutoDetalhe() {
 
   return (
     <main id="conteudo" className="py-section">
+      <Seo
+        title={product.name}
+        description={
+          product.description ??
+          `Confira ${product.name} no cardápio do ${category?.name ?? 'restaurante'}.`
+        }
+        path={`/cardapio/${product.id}`}
+        image={product.image}
+      />
       <PageContainer className="mx-auto max-w-xl">
         <motion.div
           initial="hidden"

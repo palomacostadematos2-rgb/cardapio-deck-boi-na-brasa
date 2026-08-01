@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageContainer from '@/components/ui/PageContainer'
 import SectionTitle from '@/components/ui/SectionTitle'
+import Seo from '@/components/common/Seo'
 import CategoryTabs from '@/components/menu/CategoryTabs'
 import ProductList from '@/components/menu/ProductList'
 import SearchBar from '@/components/menu/SearchBar'
@@ -28,6 +29,11 @@ function Cardapio() {
 
   return (
     <main id="conteudo" className="py-section">
+      <Seo
+        title="Cardápio"
+        description="Cervejas artesanais, drinks autorais, destilados, sucos, petiscos e porções do Deck Boi na Brasa Grill."
+        path="/cardapio"
+      />
       <PageContainer className="flex flex-col gap-8">
         <SectionTitle as="h1" eyebrow="Tudo na brasa" title="Cardápio" />
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { UtensilsCrossed } from 'lucide-react'
 import Banner from '@/components/layout/Banner'
 import AnimatedSection from '@/components/common/AnimatedSection'
+import Seo from '@/components/common/Seo'
 import PageContainer from '@/components/ui/PageContainer'
 import SectionTitle from '@/components/ui/SectionTitle'
 import WoodDivider from '@/components/ui/WoodDivider'
@@ -15,6 +16,7 @@ import { cn } from '@/utils/cn'
 function Home() {
   return (
     <main id="conteudo">
+      <Seo title="Início" path="/" />
       <Banner />
 
       <AnimatedSection id="sobre">

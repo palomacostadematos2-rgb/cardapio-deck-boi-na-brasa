@@ -11,4 +11,17 @@ export default defineConfig({
       '@': path.resolve(import.meta.dirname, './src'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (!id.includes('node_modules')) return
+          if (id.includes('framer-motion')) return 'vendor-motion'
+          if (id.includes('react-router') || id.includes('react-dom')) {
+            return 'vendor-react'
+          }
+        },
+      },
+    },
+  },
 })

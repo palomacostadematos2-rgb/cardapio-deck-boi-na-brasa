@@ -1,12 +1,14 @@
 import type { RestaurantConfig } from '@/types/restaurant'
-import logo from '@/assets/images/logo.jpeg'
+import logo from '@/assets/images/logo-optimized.jpg'
+import { env } from '@/config/env'
+
+export const appUrl = env.appUrl
 
 export const restaurantConfig: RestaurantConfig = {
-  name: 'Deck Boi na Brasa Grill',
+  name: env.restaurantName,
   shortName: 'Boi na Brasa',
   tagline: 'Bar & Restaurante',
-  description:
-    'Churrasco no ponto, ambiente descontraído e muito sabor na brasa.',
+  description: env.restaurantDescription,
   logo,
   address: {
     street: 'Rua Desembargador José Satyro, 302',

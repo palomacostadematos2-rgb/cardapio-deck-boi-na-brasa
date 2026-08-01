@@ -4,12 +4,18 @@ import PageContainer from '@/components/ui/PageContainer'
 import SectionTitle from '@/components/ui/SectionTitle'
 import WoodDivider from '@/components/ui/WoodDivider'
 import Logo from '@/components/ui/Logo'
+import Seo from '@/components/common/Seo'
 import { restaurantConfig } from '@/constants/restaurant.config'
 import { fadeUp, staggerChildren } from '@/constants/animations'
 
 function Sobre() {
   return (
     <main id="conteudo" className="py-section">
+      <Seo
+        title="Sobre"
+        description={`Conheça o ${restaurantConfig.name}: endereço, horário de funcionamento e a história da casa.`}
+        path="/sobre"
+      />
       <PageContainer className="mx-auto flex max-w-xl flex-col gap-8">
         <motion.div
           initial="hidden"

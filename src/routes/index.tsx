@@ -1,9 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import RootLayout from '@/components/layout/RootLayout'
 import Home from '@/pages/Home'
-import Cardapio from '@/pages/Cardapio'
-import ProdutoDetalhe from '@/pages/ProdutoDetalhe'
-import Sobre from '@/pages/Sobre'
+import { Cardapio, ProdutoDetalhe, Sobre } from '@/routes/lazyPages'
 
 export const router = createBrowserRouter([
   {
