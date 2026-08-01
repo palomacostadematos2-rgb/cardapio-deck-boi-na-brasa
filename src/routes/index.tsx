@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import RootLayout from '@/components/layout/RootLayout'
 import Home from '@/pages/Home'
-import { Cardapio, ProdutoDetalhe, Sobre } from '@/routes/lazyPages'
+import { Cardapio, ProdutoDetalhe, Sobre, NotFound } from '@/routes/lazyPages'
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +12,7 @@ export const router = createBrowserRouter([
       { path: 'cardapio', element: <Cardapio /> },
       { path: 'cardapio/:productId', element: <ProdutoDetalhe /> },
       { path: 'sobre', element: <Sobre /> },
+      { path: '*', element: <NotFound /> },
     ],
   },
 ])
