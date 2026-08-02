@@ -39,7 +39,10 @@ if (!appUrl) {
 }
 
 const targetUrl = new URL('/cardapio', appUrl).toString()
-const outputPath = path.resolve('qrcode-cardapio.png')
+const outputDir = path.resolve('qrcode')
+const outputPath = path.join(outputDir, 'qrcode-cardapio.png')
+
+fs.mkdirSync(outputDir, { recursive: true })
 
 await QRCode.toFile(outputPath, targetUrl, {
   width: 1024,

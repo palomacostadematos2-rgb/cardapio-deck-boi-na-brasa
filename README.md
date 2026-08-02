@@ -85,9 +85,13 @@ Passos gerais:
 3. Publique o conteúdo da pasta `dist/`.
 4. Configure o servidor/hospedagem para SPA fallback: qualquer rota
    (`/cardapio`, `/sobre`, `/cardapio/:id`) deve servir `dist/index.html`
-   (rewrite/fallback de 404 para `index.html`). Na Vercel/Netlify isso é
-   automático para projetos Vite; em outros provedores, configure a regra de
-   rewrite manualmente.
+   (rewrite/fallback de 404 para `index.html`) — sem isso, acessar uma rota
+   diretamente (ex.: pelo QR Code, que aponta direto para `/cardapio`) resulta
+   em 404 da própria hospedagem, mesmo com o app funcionando normalmente pela
+   navegação interna. Na Vercel, o `vercel.json` na raiz do projeto já
+   resolve isso (rewrite de qualquer caminho para `/index.html`). No Netlify,
+   crie um `public/_redirects` com `/* /index.html 200`. Em outros
+   provedores, configure a regra equivalente manualmente.
 5. Depois de publicar, gere o QR Code apontando para a URL real (veja
    [Como gerar o QR Code](#como-gerar-o-qr-code)).
 
@@ -222,9 +226,9 @@ apontando para `/cardapio`:
 npm run qrcode
 ```
 
-Isso cria `qrcode-cardapio.png` (1024×1024, cores da marca) na raiz do
-projeto — arquivo git-ignorado, gerado localmente para impressão em mesas ou
-materiais do restaurante. Ele **nunca aparece na interface do cliente**.
+Isso cria `qrcode/qrcode-cardapio.png` (1024×1024, cores da marca) — pasta
+git-ignorada, gerada localmente para impressão em mesas ou materiais do
+restaurante. Ele **nunca aparece na interface do cliente**.
 
 Para gerar apontando para uma URL específica sem alterar o `.env`:
 
@@ -277,7 +281,7 @@ npm run build          # build de produção (dist/)
 npm run preview        # serve o build de produção localmente
 npm run lint           # checa o código com ESLint
 npm run format          # formata o código com Prettier
-npm run qrcode           # gera qrcode-cardapio.png a partir de VITE_APP_URL
+npm run qrcode           # gera qrcode/qrcode-cardapio.png a partir de VITE_APP_URL
 npm run optimize:logo    # gera as versões WebP/JPEG otimizadas da logo
 npm run generate:og-image # gera public/og-image.jpg a partir da logo
 ```
