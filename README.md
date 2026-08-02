@@ -199,22 +199,33 @@ texto institucional hardcoded em nenhum componente.
 
 ## Como adicionar fotos reais dos produtos
 
-Hoje os produtos exibem um **placeholder premium padronizado** (textura de
-madeira + ícone da categoria), gerado pelo componente
-`src/components/menu/ProductImage.tsx`. Para usar uma foto real:
+Hoje todos os produtos exibem um **placeholder premium padronizado** (textura
+de madeira + ícone da categoria), gerado pelo componente
+`src/components/menu/ProductImage.tsx`. A lista completa de produtos ainda sem
+foto fica em [`docs/produtos-sem-imagem.md`](docs/produtos-sem-imagem.md).
 
-1. Coloque o arquivo de imagem em `src/assets/images/` (ou em `public/` se
-   preferir referenciar por URL absoluta).
-2. No `products.json`, preencha o campo `image` do produto com o caminho da
-   imagem (import estático recomendado — veja o padrão usado em
-   `restaurant.config.ts` para a logo — ou uma URL relativa a `public/`).
-3. O `ProductImage` detecta automaticamente a presença de `image` e passa a
-   exibir a foto real no lugar do placeholder, tanto no card quanto na página
-   de detalhe do produto.
+Para adicionar uma foto real, **a vinculação é automática, sem editar o
+`products.json`**:
 
-Recomenda-se otimizar as fotos (formato WebP, ~800px de largura, < 150KB) antes
-de adicionar — o script `scripts/optimize-logo.mjs` pode ser adaptado como
-referência para lotes de imagens de produtos.
+1. Salve a imagem em `src/assets/images/products/` com o nome **exatamente
+   igual ao `id` do produto** (veja `src/constants/products.json`). Ex.:
+   produto `"id": "cervejas-01"` → arquivo `cervejas-01.jpg` (também aceita
+   `.jpeg`, `.png` ou `.webp`).
+2. Rode `npm run dev` ou `npm run build` normalmente — `src/utils/productImages.ts`
+   localiza a imagem pelo nome via `import.meta.glob` do Vite e o
+   `ProductImage` passa a exibi-la no card e na página de detalhe.
+3. (Opcional) Rode `npm run images:missing` para atualizar a lista de
+   pendências em `docs/produtos-sem-imagem.md`.
+
+Detalhes e recomendações de qualidade (proporção, formato, iluminação) estão
+em `src/assets/images/products/README.md`. Recomenda-se otimizar as fotos
+(formato WebP, ~800px de largura, < 150KB) — o script `scripts/optimize-logo.mjs`
+pode servir de referência para lotes de imagens.
+
+**Atenção com direitos de imagem**: para bebidas industrializadas (Coca-Cola,
+Heineken, Corona, Red Bull etc.), use apenas fotos de embalagem licenciadas ou
+produzidas pelo próprio restaurante — não baixe imagens de marca de fontes sem
+verificar os direitos de uso.
 
 ## Como gerar o QR Code
 
@@ -284,6 +295,7 @@ npm run format          # formata o código com Prettier
 npm run qrcode           # gera qrcode/qrcode-cardapio.png a partir de VITE_APP_URL
 npm run optimize:logo    # gera as versões WebP/JPEG otimizadas da logo
 npm run generate:og-image # gera public/og-image.jpg a partir da logo
+npm run images:missing    # atualiza docs/produtos-sem-imagem.md
 ```
 
 ## Sugestões de melhorias futuras

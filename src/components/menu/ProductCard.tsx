@@ -5,6 +5,7 @@ import type { Product } from '@/types/product'
 import ProductImage from '@/components/menu/ProductImage'
 import { focusRingClasses } from '@/constants/a11y'
 import { getCategoryById } from '@/utils/menuData'
+import { getProductImage } from '@/utils/productImages'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { cn } from '@/utils/cn'
 
@@ -29,7 +30,7 @@ function ProductCard({ product }: ProductCardProps) {
       )}
     >
       <ProductImage
-        image={product.image}
+        image={getProductImage(product.id) ?? product.image}
         name={product.name}
         categoryIcon={category?.icon}
         className="aspect-[4/3] w-full transition-transform duration-500 group-hover:scale-105"

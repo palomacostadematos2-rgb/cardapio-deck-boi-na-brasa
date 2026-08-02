@@ -8,6 +8,7 @@ import CategoryBadge from '@/components/menu/CategoryBadge'
 import ProductImage from '@/components/menu/ProductImage'
 import Seo from '@/components/common/Seo'
 import { getCategoryById, getProductById } from '@/utils/menuData'
+import { getProductImage } from '@/utils/productImages'
 import { fadeUp, scaleIn, staggerChildren } from '@/constants/animations'
 import { focusRingClasses } from '@/constants/a11y'
 import { formatCurrency } from '@/utils/formatCurrency'
@@ -26,6 +27,8 @@ function ProdutoDetalhe() {
     return <Navigate to="/cardapio" replace />
   }
 
+  const resolvedImage = getProductImage(product.id) ?? product.image
+
   return (
     <main id="conteudo" className="py-section">
       <Seo
@@ -35,7 +38,7 @@ function ProdutoDetalhe() {
           `Confira ${product.name} no cardápio do ${category?.name ?? 'restaurante'}.`
         }
         path={`/cardapio/${product.id}`}
-        image={product.image}
+        image={resolvedImage}
       />
       <PageContainer className="mx-auto max-w-xl">
         <motion.div
@@ -62,7 +65,7 @@ function ProdutoDetalhe() {
             className="border-wood-800 bg-surface overflow-hidden rounded-2xl border"
           >
             <ProductImage
-              image={product.image}
+              image={resolvedImage}
               name={product.name}
               categoryIcon={category?.icon}
               className="aspect-[4/3] w-full"
