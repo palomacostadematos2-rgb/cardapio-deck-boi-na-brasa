@@ -3,8 +3,9 @@
  *
  * Basta salvar um arquivo em src/assets/images/categories/ com o nome exato
  * do `id` da categoria (ex.: cervejas.jpg para a categoria "cervejas") —
- * nenhuma edição do products.json é necessária. Segue o mesmo padrão de
- * src/utils/productImages.ts.
+ * nenhuma edição do products.json é necessária. As imagens de categoria são
+ * o único lugar do cardápio que exibe fotografia; produtos são somente
+ * texto (nome, descrição, preço).
  */
 const modules = import.meta.glob(
   '/src/assets/images/categories/*.{jpg,jpeg,png,webp}',

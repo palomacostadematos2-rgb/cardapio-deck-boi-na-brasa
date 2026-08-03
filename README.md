@@ -15,7 +15,7 @@ qualquer integração de contato dentro do app.
 - [Como editar o cardápio (`products.json`)](#como-editar-o-cardápio-productsjson)
 - [Como editar os dados do restaurante (`restaurant.config.ts`)](#como-editar-os-dados-do-restaurante-restaurantconfigts)
 - [Como trocar a logomarca](#como-trocar-a-logomarca)
-- [Como adicionar fotos reais dos produtos](#como-adicionar-fotos-reais-dos-produtos)
+- [Como trocar as fotos das categorias](#como-trocar-as-fotos-das-categorias)
 - [Como gerar o QR Code](#como-gerar-o-qr-code)
 - [Estrutura de pastas](#estrutura-de-pastas)
 - [Scripts disponíveis](#scripts-disponíveis)
@@ -197,35 +197,28 @@ texto institucional hardcoded em nenhum componente.
    Sobre — todos usam o componente `src/components/ui/Logo.tsx`, que lê de
    `restaurant.config.ts`.
 
-## Como adicionar fotos reais dos produtos
+## Como trocar as fotos das categorias
 
-Hoje todos os produtos exibem um **placeholder premium padronizado** (textura
-de madeira + ícone da categoria), gerado pelo componente
-`src/components/menu/ProductImage.tsx`. A lista completa de produtos ainda sem
-foto fica em [`docs/produtos-sem-imagem.md`](docs/produtos-sem-imagem.md).
+Por design, **produtos individuais não têm foto** — só nome, descrição e
+preço, para manter a navegação leve e rápida. A única fotografia do cardápio
+fica nos 6 cards de categoria da tela inicial do `/cardapio`.
 
-Para adicionar uma foto real, **a vinculação é automática, sem editar o
-`products.json`**:
+A vinculação é automática, sem editar o `products.json`:
 
-1. Salve a imagem em `src/assets/images/products/` com o nome **exatamente
-   igual ao `id` do produto** (veja `src/constants/products.json`). Ex.:
-   produto `"id": "cervejas-01"` → arquivo `cervejas-01.jpg` (também aceita
-   `.jpeg`, `.png` ou `.webp`).
-2. Rode `npm run dev` ou `npm run build` normalmente — `src/utils/productImages.ts`
-   localiza a imagem pelo nome via `import.meta.glob` do Vite e o
-   `ProductImage` passa a exibi-la no card e na página de detalhe.
-3. (Opcional) Rode `npm run images:missing` para atualizar a lista de
-   pendências em `docs/produtos-sem-imagem.md`.
+1. Salve a imagem em `src/assets/images/categories/` com o nome **exatamente
+   igual ao `id` da categoria** (veja `categories[].id` em
+   `src/constants/products.json`: `cervejas`, `caipirinhas-drinks`,
+   `destilados-licores`, `sucos-nao-alcoolicos`, `petiscos`, `porcoes`). Ex.:
+   categoria `cervejas` → arquivo `cervejas.jpg` (também aceita `.jpeg`,
+   `.png` ou `.webp`). Sem espaços, acentos ou maiúsculas no nome do arquivo.
+2. Rode `npm run dev` ou `npm run build` normalmente —
+   `src/utils/categoryImages.ts` localiza a imagem pelo nome via
+   `import.meta.glob` do Vite e o card passa a exibi-la como fundo, com
+   overlay escuro para legibilidade. Categorias sem imagem continuam usando o
+   placeholder padrão (textura de madeira + ícone grande).
 
 Detalhes e recomendações de qualidade (proporção, formato, iluminação) estão
-em `src/assets/images/products/README.md`. Recomenda-se otimizar as fotos
-(formato WebP, ~800px de largura, < 150KB) — o script `scripts/optimize-logo.mjs`
-pode servir de referência para lotes de imagens.
-
-**Atenção com direitos de imagem**: para bebidas industrializadas (Coca-Cola,
-Heineken, Corona, Red Bull etc.), use apenas fotos de embalagem licenciadas ou
-produzidas pelo próprio restaurante — não baixe imagens de marca de fontes sem
-verificar os direitos de uso.
+em `src/assets/images/categories/README.md`.
 
 ## Como gerar o QR Code
 
@@ -294,14 +287,12 @@ npm run lint           # checa o código com ESLint
 npm run format          # formata o código com Prettier
 npm run qrcode           # gera qrcode/qrcode-cardapio.png a partir de VITE_APP_URL
 npm run optimize:logo    # gera as versões WebP/JPEG otimizadas da logo
+npm run optimize:categories # comprime as imagens de fundo das categorias para WebP
 npm run generate:og-image # gera public/og-image.jpg a partir da logo
-npm run images:missing    # atualiza docs/produtos-sem-imagem.md
 ```
 
 ## Sugestões de melhorias futuras
 
-- **Fotos reais dos produtos**: substituir os placeholders conforme o
-  restaurante for fotografando o cardápio (estrutura já pronta, veja acima).
 - **PWA**: adicionar manifest + service worker para permitir "adicionar à
   tela inicial" e uso offline básico do cardápio.
 - **Analytics leve**: um contador de visitas/página mais vista (ex.: Plausible
