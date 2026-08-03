@@ -9,14 +9,14 @@ categoria.
 
 ## Ids atuais (veja `categories[].id` em `src/constants/products.json`)
 
-| id                     | Categoria               | Arquivo esperado                   |
-| ----------------------- | ------------------------ | ----------------------------------- |
-| `cervejas`               | Cervejas                  | `cervejas.webp` (ou .jpg/.jpeg/.png) |
-| `caipirinhas-drinks`     | Caipirinhas & Drinks       | `caipirinhas-drinks.webp`            |
-| `destilados-licores`     | Destilados & Licores       | `destilados-licores.webp`            |
-| `sucos-nao-alcoolicos`    | Sucos & Não Alcoólicos      | `sucos-nao-alcoolicos.webp`          |
-| `petiscos`                | Petiscos                   | `petiscos.webp`                      |
-| `porcoes`                 | Porções                    | `porcoes.webp`                       |
+| id                     | Categoria              | Arquivo esperado                     |
+| ---------------------- | ---------------------- | ------------------------------------ |
+| `cervejas`             | Cervejas               | `cervejas.webp` (ou .jpg/.jpeg/.png) |
+| `caipirinhas-drinks`   | Caipirinhas & Drinks   | `caipirinhas-drinks.webp`            |
+| `destilados-licores`   | Destilados & Licores   | `destilados-licores.webp`            |
+| `sucos-nao-alcoolicos` | Sucos & Não Alcoólicos | `sucos-nao-alcoolicos.webp`          |
+| `petiscos`             | Petiscos               | `petiscos.webp`                      |
+| `porcoes`              | Porções                | `porcoes.webp`                       |
 
 O nome do arquivo **não pode ter espaços, acentos ou maiúsculas** — precisa
 ser exatamente o `id`, sem extras (ex.: `porções.jpg` não é reconhecido,
