@@ -6,32 +6,25 @@ import { groupProducts } from '@/utils/groupProducts'
 
 interface ProductListProps {
   products: Product[]
-  id?: string
-  labelledBy?: string
+  emptyMessage?: string
 }
 
-function ProductList({ products, id, labelledBy }: ProductListProps) {
+function ProductList({
+  products,
+  emptyMessage = 'Nenhum produto disponível nesta categoria.',
+}: ProductListProps) {
   const groups = groupProducts(products)
 
   if (products.length === 0) {
     return (
-      <div
-        id={id}
-        role="tabpanel"
-        aria-labelledby={labelledBy}
-        className="text-cream-dim py-12 text-center text-sm sm:text-base"
-      >
-        Nenhum produto disponível nesta categoria.
-      </div>
+      <p className="text-cream-dim py-12 text-center text-sm sm:text-base">
+        {emptyMessage}
+      </p>
     )
   }
 
   return (
     <motion.div
-      id={id}
-      role="tabpanel"
-      aria-labelledby={labelledBy}
-      key={products[0]?.categoryId}
       initial="hidden"
       animate="visible"
       variants={staggerChildren}

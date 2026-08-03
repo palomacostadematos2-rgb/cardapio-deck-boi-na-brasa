@@ -2,11 +2,12 @@ import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageContainer from '@/components/ui/PageContainer'
 import SectionTitle from '@/components/ui/SectionTitle'
+import BackLink from '@/components/ui/BackLink'
 import Seo from '@/components/common/Seo'
-import CategoryTabs from '@/components/menu/CategoryTabs'
+import CategoryGrid from '@/components/menu/CategoryGrid'
 import ProductList from '@/components/menu/ProductList'
 import SearchBar from '@/components/menu/SearchBar'
-import SearchResults from '@/components/menu/SearchResults'
+import { categoryIconMap } from '@/constants/categoryIcons'
 import { getMenuData } from '@/utils/menuData'
 import { useProductSearch } from '@/hooks/useProductSearch'
 import { pageFade } from '@/constants/animations'
@@ -14,18 +15,34 @@ import { pageFade } from '@/constants/animations'
 const { categories, products } = getMenuData()
 
 function Cardapio() {
-  const [activeId, setActiveId] = useState(categories[0]?.id ?? '')
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string | null>(
+    null,
+  )
   const [query, setQuery] = useState('')
 
-  const searchResults = useProductSearch(products, query)
+  const selectedCategory = categories.find((c) => c.id === selectedCategoryId)
+  const CategoryIcon = selectedCategory
+    ? categoryIconMap[selectedCategory.icon]
+    : undefined
 
-  const activeProducts = useMemo(
-    () => products.filter((product) => product.categoryId === activeId),
-    [activeId],
+  const categoryProducts = useMemo(
+    () =>
+      products.filter((product) => product.categoryId === selectedCategoryId),
+    [selectedCategoryId],
   )
 
-  const isSearching = searchResults !== null
-  const panelId = `panel-${activeId}`
+  const searchResults = useProductSearch(categoryProducts, query)
+  const displayedProducts = searchResults ?? categoryProducts
+
+  function handleSelectCategory(categoryId: string) {
+    setSelectedCategoryId(categoryId)
+    setQuery('')
+  }
+
+  function handleBack() {
+    setSelectedCategoryId(null)
+    setQuery('')
+  }
 
   return (
     <main id="conteudo" className="py-section">
@@ -37,44 +54,54 @@ function Cardapio() {
       <PageContainer className="flex flex-col gap-8">
         <SectionTitle as="h1" eyebrow="Tudo na brasa" title="Cardápio" />
 
-        <SearchBar value={query} onChange={setQuery} />
-
         <AnimatePresence mode="wait">
-          {isSearching ? (
+          {!selectedCategory ? (
             <motion.div
-              key="search"
+              key="categories"
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={pageFade}
             >
-              <SearchResults
-                query={query}
-                results={searchResults}
+              <CategoryGrid
                 categories={categories}
+                onSelect={handleSelectCategory}
               />
             </motion.div>
           ) : (
             <motion.div
-              key="browse"
+              key={selectedCategory.id}
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={pageFade}
-              className="flex flex-col gap-8"
+              className="flex flex-col gap-6"
             >
-              <div className="border-wood-800/40 bg-background/95 sticky top-16 z-40 -mx-4 border-b px-4 backdrop-blur sm:static sm:mx-0 sm:border-none sm:bg-transparent sm:px-0 sm:backdrop-blur-none">
-                <CategoryTabs
-                  categories={categories}
-                  activeId={activeId}
-                  onChange={setActiveId}
-                  panelId={panelId}
-                />
+              <div className="flex flex-col items-center gap-3 text-center">
+                <BackLink onClick={handleBack}>Voltar às categorias</BackLink>
+
+                <div className="flex items-center gap-2">
+                  {CategoryIcon && (
+                    <CategoryIcon
+                      className="text-flame-300 h-6 w-6"
+                      aria-hidden
+                    />
+                  )}
+                  <h2 className="font-display text-cream text-xl tracking-wide uppercase sm:text-2xl">
+                    {selectedCategory.name}
+                  </h2>
+                </div>
               </div>
+
+              <SearchBar value={query} onChange={setQuery} />
+
               <ProductList
-                products={activeProducts}
-                id={panelId}
-                labelledBy={`tab-${activeId}`}
+                products={displayedProducts}
+                emptyMessage={
+                  query
+                    ? `Nenhum item encontrado para "${query}" em ${selectedCategory.name}.`
+                    : 'Nenhum produto disponível nesta categoria.'
+                }
               />
             </motion.div>
           )}

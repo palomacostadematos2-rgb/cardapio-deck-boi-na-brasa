@@ -1,18 +1,16 @@
 import { useEffect } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft } from 'lucide-react'
 import PageContainer from '@/components/ui/PageContainer'
 import WoodDivider from '@/components/ui/WoodDivider'
+import BackLink from '@/components/ui/BackLink'
 import CategoryBadge from '@/components/menu/CategoryBadge'
 import ProductImage from '@/components/menu/ProductImage'
 import Seo from '@/components/common/Seo'
 import { getCategoryById, getProductById } from '@/utils/menuData'
 import { getProductImage } from '@/utils/productImages'
 import { fadeUp, scaleIn, staggerChildren } from '@/constants/animations'
-import { focusRingClasses } from '@/constants/a11y'
 import { formatCurrency } from '@/utils/formatCurrency'
-import { cn } from '@/utils/cn'
 
 function ProdutoDetalhe() {
   const { productId } = useParams<{ productId: string }>()
@@ -48,16 +46,7 @@ function ProdutoDetalhe() {
           className="flex flex-col gap-6"
         >
           <motion.div variants={fadeUp}>
-            <Link
-              to="/cardapio"
-              className={cn(
-                'text-cream-dim hover:text-cream inline-flex items-center gap-2 rounded-full text-sm transition-colors',
-                focusRingClasses,
-              )}
-            >
-              <ArrowLeft className="h-4 w-4" aria-hidden />
-              Voltar ao cardápio
-            </Link>
+            <BackLink to="/cardapio">Voltar ao cardápio</BackLink>
           </motion.div>
 
           <motion.div
